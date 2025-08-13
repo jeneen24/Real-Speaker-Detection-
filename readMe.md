@@ -8,6 +8,7 @@ Identify which speaker is currently the closest/loudest.
 Transcribe speech in real time with language selection.
 
 Display and rank live transcriptions by speaker activity.
+
 --
 # 🚀 Features
 Multi-Microphone Support – Add and manage multiple audio input devices.
@@ -23,9 +24,9 @@ Multi-Language Support – Choose from multiple languages and dialects.
 Adjustable Sensitivity & VAD Threshold – Fine-tune voice detection accuracy.
 
 Speaker Ranking – Show rank of speakers based on current loudness.
+
 --
 # 📂 Project Structure
-
 
 ├── index.html      # Main HTML interface
 ├── styles.css      # UI styling and animations
@@ -44,6 +45,7 @@ Speaker Ranking – Active speakers are sorted by intensity to find the closest/
 Speech Recognition – The browser’s Speech Recognition API transcribes active speech.
 
 Live UI Updates – Speaker list, transcriptions, and visualizations update in real time.
+
 --
 # 📋 Requirements
 A modern browser that supports:
@@ -66,6 +68,7 @@ Add one or more microphones from the devices list.
 Speak into any connected microphone – the app detects who is speaking and transcribes speech.
 
 Click "Stop" to end detection.
+
 --
 # ⚙️ Configuration Options
 VAD Threshold (vadThreshold) – Adjusts the decibel level needed to detect speech.
@@ -73,6 +76,7 @@ VAD Threshold (vadThreshold) – Adjusts the decibel level needed to detect spee
 Sensitivity (sensitivity) – Controls RMS threshold for voice activity.
 
 Language – Choose the speech recognition language from the dropdown.
+
 --
 # 🎨 UI Overview
 Speaker List – Shows all connected microphones, their current activity, intensity, and peak frequency.
@@ -82,6 +86,7 @@ Audio Visualization Canvas – Displays intensity bars and frequency spectrum fo
 Transcriptions List – Shows recent transcriptions with speaker name, intensity, rank, and timestamp.
 
 Status Bar – Displays the current system state.
+
 --
 # ⚠️ Notes
 
@@ -151,4 +156,5 @@ Speaker profiling data
 
 
 The system now provides enterprise-level features with beautiful visualizations, making it suitable for professional meeting analysis, research applications, or advanced audio monitoring scenarios. The interface is modern and responsive, working well on both desktop and mobile devices.
+
 
