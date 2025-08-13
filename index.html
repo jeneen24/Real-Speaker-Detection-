@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Multi-Speaker Detection System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 Real Multi-Speaker Detection System</h1>
+        
+        <div class="controls">
+            <button id="startBtn" class="start-btn">
+                <span class="status-indicator idle"></span>
+                Start Real Detection
+            </button>
+            <button id="stopBtn" class="stop-btn" disabled>
+                <span class="status-indicator idle"></span>
+                Stop Detection
+            </button>
+            <button id="addMicBtn" class="add-speaker-btn">
+                🎤 Add Microphone
+            </button>
+        </div>
+
+        <div class="device-selection">
+            <h3>🎧 Available Audio Devices</h3>
+            <div id="devicesList">
+                <p class="loading-devices">Loading audio devices...</p>
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <div class="speakers-panel">
+                <h3 class="panel-title">🎙️ Active Microphones</h3>
+                <div id="speakersList">
+                    <div class="no-microphones">
+                        No microphones connected. Click "Start Real Detection" to begin.
+                    </div>
+                </div>
+            </div>
+
+            <div class="transcriptions-panel">
+                <h3 class="panel-title">📝 Live Transcriptions</h3>
+                <div id="transcriptionsList">
+                    <div class="no-transcriptions">
+                        Grant microphone permission and start speaking to see transcriptions...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="audio-visualization">
+            <h3 class="panel-title">🌊 Real-time Audio Analysis</h3>
+            <canvas id="audioCanvas" width="800" height="200"></canvas>
+        </div>
+
+        <div class="settings-panel">
+            <h3 class="panel-title">⚙️ Detection Settings</h3>
+            <div class="settings-grid">
+                <div class="setting-item">
+                    <label for="vadThreshold">Voice Activity Threshold:</label>
+                    <input type="range" id="vadThreshold" min="-60" max="-20" value="-40" step="1">
+                    <span id="vadValue">-40 dB</span>
+                </div>
+                <div class="setting-item">
+                    <label for="sensitivity">Detection Sensitivity:</label>
+                    <input type="range" id="sensitivity" min="1" max="10" value="5" step="1">
+                    <span id="sensitivityValue">5</span>
+                </div>
+                <div class="setting-item">
+                    <label for="language">Speech Recognition Language:</label>
+                    <select id="language">
+                        <option value="en-US">English (US)</option>
+                        <option value="ar-SA">Arabic</option>
+                        <option value="es-ES">Spanish</option>
+                        <option value="fr-FR">French</option>
+                        <option value="de-DE">German</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label>Status:</label>
+                    <div id="systemStatus" class="status-display">
+                        <span class="status-indicator idle"></span>
+                        System Ready
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="help-section">
+            <h3 class="panel-title">❓ How to Use</h3>
+            <div class="help-content">
+                <ol>
+                    <li>Click "Start Real Detection" and allow microphone access</li>
+                    <li>Your default microphone will be added automatically</li>
+                    <li>Add more microphones from the "Available Audio Devices" section</li>
+                    <li>Speak and watch real-time intensity and transcriptions</li>
+                    <li>Adjust settings to optimize for your environment</li>
+                </ol>
+                <p><strong>Note:</strong> This system works best in Chrome browser with HTTPS connection.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="realSpeakerDetection.js"></script>
+</body>
+</html>
